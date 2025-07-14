@@ -134,5 +134,39 @@ function getallcomment($video_id, $bdd)
     return $publication;
 }
 
+function getobjet() {
+    $bdd=dbconnect();
+    $sql = "SELECT objet.id_objet, objet.nom_objet, categorie_objet.nom_categorie, membre.nom AS nom_membre
+            FROM objet
+            JOIN categorie_objet ON objet.id_categorie = categorie_objet.id_categorie
+            JOIN membre ON objet.id_membre = membre.id_membre";
+    $result = mysqli_query($bdd, $sql);
+    $objets = array();
+    while ($row = mysqli_fetch_assoc($result)) {
+        $objets[] = $row;
+    }
+    return $objets;
+}
+
+function filtreparcateg($bdd, $id_categorie = 0) {
+    $objets = array();
+    if ($id_categorie > 0) {
+        $sql = "SELECT objet.id_objet, objet.nom_objet, categorie_objet.nom_categorie, membre.nom AS nom_membre
+                FROM objet
+                JOIN categorie_objet ON objet.id_categorie = categorie_objet.id_categorie
+                JOIN membre ON objet.id_membre = membre.id_membre
+                WHERE objet.id_categorie = " . intval($id_categorie);
+    } else {
+        $sql = "SELECT objet.id_objet, objet.nom_objet, categorie_objet.nom_categorie, membre.nom AS nom_membre
+                FROM objet
+                JOIN categorie_objet ON objet.id_categorie = categorie_objet.id_categorie
+                JOIN membre ON objet.id_membre = membre.id_membre";
+    }
+    $result = mysqli_query($bdd, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+        $objets[] = $row;
+    }
+    return $objets;
+}
 
 ?>
