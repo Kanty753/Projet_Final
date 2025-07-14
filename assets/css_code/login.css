@@ -1,0 +1,94 @@
+*{
+      box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height:100%;
+}
+.countainer {
+    background: linear-gradient(to TOP, #FDFCFB, #E2D1C3) no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height:100%;
+  padding-top: 5%;
+}
+h1 {
+  color: white;
+}
+input , select{
+  border: none;
+  background: transparent;
+  outline: none;
+  min-width: fit-content;
+}
+form {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 10%;
+  margin: 10%;
+}
+h1 {
+  text-align: center;
+  color: rgb(238, 238, 238);
+}
+.text {
+  color: rgb(54, 54, 110);
+  font-weight: 600;
+}
+.zone {
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 3px solid transparent;
+  background: linear-gradient(#ede6fc, #ede6fc) padding-box,
+    linear-gradient(130deg, #b388f9, #ff9a8b) border-box;
+
+    width: 100%;
+    min-width: fit-content;
+}
+
+.register{
+    text-align: center ;
+}
+.submit_account{
+     
+    margin-bottom: 5%;
+    border-radius: 10px;
+    border: transparent;
+    color: white;
+    background: linear-gradient(to left, #ff9a8b, #fd6464) ;
+    font-size: x-large;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+a{
+    color: #8a9cff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.text{
+    color:#4b477a
+}
+p{
+  text-align: center;
+}
+.error{
+  font-size: x-small;
+  color: #fd6464;
+}

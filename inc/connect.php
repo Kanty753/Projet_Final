@@ -2,7 +2,7 @@
 function dbconnect()
 {
     static $connect = null;
-    $bdd_name = "tiktok";
+    $bdd_name = "projet_final"; // Nom de la base de données
     $mdp = "";
     $user = "root";
     $host = "localhost";

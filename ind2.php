@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = ''; // Remplace par ton mot de passe si besoin
-$dbname = 'tiktok';
+$dbname = 'projet_final'; // Nom de la base de données
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 
